@@ -9,7 +9,7 @@ def encoder(password):
     return new
 
 # password decoder
-def decoder(password):
+def decoder(passwd):
     s_to_int = [(int(i) - 3) % 10 for i in passwd]
     out = [str(i) for i in s_to_int]
     out_1 = "".join(out)
