@@ -4,7 +4,7 @@
 def encoder(password):
     new = ''
     for i in password:
-        data = ((int(i) + 3) % 10)
+        data = str((int(i) + 3) % 10)
         new += data
     return new
 
@@ -31,8 +31,8 @@ def main():
             print('Your password has been encoded and stored!')
             pass
         elif option == 2:
-            old = decoder(password)
-            print('The encoded password is', new, 'and the original password is', old'.')
+            original = decoder(new)
+            print(f'The encoded password is {new} and the original password is {original}.')
             pass
         elif option == 3:
             break
