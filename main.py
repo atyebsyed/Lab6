@@ -10,6 +10,10 @@ def encoder(password):
 
 # password decoder
 def decoder(password):
+    s_to_int = [(int(i) - 3) % 10 for i in passwd]
+    out = [str(i) for i in s_to_int]
+    out_1 = "".join(out)
+    return out_1
 
 
 def main():
